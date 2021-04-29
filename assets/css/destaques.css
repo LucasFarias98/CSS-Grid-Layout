@@ -1,0 +1,80 @@
+.caixa {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+
+.destaques {
+	display: grid;
+	grid-gap: .2rem; /* espaçamento de uma linha para outra.  e de uma coluna para outra*/
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 33.33% 33.33% 33.33%;
+	height: calc(100vh - 50px); /* 100 view port rate =) */
+}
+
+.destaques__titulo {
+	background: rgba(0 , 0, 0, .5);
+	color: #fdfdfd;
+	padding: .6rem;
+	text-align: center;
+	width: 100%;
+}
+
+
+
+.destaques__principal {  /* __ metodologia bem onde o "principal" é um elemento filho do destaques */
+	background: url('../img/fortnite.jpg') center / cover no-repeat;
+	grid-row: 1 / 3;
+	     /* os valores definidos no start e end devem ser definidos com muito cuidado. */
+}
+
+.destaques__secundario:nth-child(2) {
+	background: url('../img/pubg.jpg') center / cover no-repeat;
+		 
+}
+
+.destaques__secundario:nth-child(3) {
+	background: url('../img/slack.png') center / cover no-repeat;
+
+}
+
+
+.destaques__secundario:nth-child(4) {
+	background: url('../img/whatsapp.png') center / cover no-repeat;
+ 	
+}
+
+.destaques__secundario:nth-child(5) {
+	background: url('../img/cs-go.jpg') center / cover no-repeat;
+	
+
+}
+
+
+.destaques__categorias {
+	
+	grid-row: 3 / 3;
+}
+
+.destaques__categorias___lista {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	justify-content: space-between;
+
+}
+
+.destaques__categorias___item {
+	display: flex;
+	align-items: center;
+	background: #fdfdfd;
+	border-left: 5px solid transparent;
+	color: #333333;
+	padding: 1rem;
+	width: 50%;
+}
+
+.destaques__categorias___link {
+	color: inherit; /* vai herdar a cor do pai no caso o li   */
+}
